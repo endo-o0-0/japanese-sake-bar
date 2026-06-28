@@ -1,0 +1,311 @@
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#loading img {
+  height: 100px;
+  width: auto;
+}
+
+/* 基本設定 */
+body {
+  font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  color: #0d2d6b;
+  background-color: #f8f6f1;
+}
+
+/* リンクの下線・色をリセット */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* リストの点を消す */
+ul {
+  list-style: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  position: fixed;  /* 画面に固定する */
+  top: 0;           /* 画面の一番上に配置 */
+  left: 0;
+  width: 100%;      /* 横幅いっぱいに */
+  z-index: 100;     /* 他の要素より手前に表示 */
+  background-color: #ffffff;
+}
+
+/* ロゴ画像 */
+#logo {
+  height: 70px;
+  width: auto;
+}
+
+/* ナビゲーション */
+nav ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav a {
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #0d2d6b;
+  transition: width 0.3s ease; /* なめらかに伸びる */
+}
+
+nav a:hover::after {
+  width: 100%; /* ホバーで下線が伸びる */
+}
+
+
+/* Hero */
+#image {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  display: block;
+  margin-top: 110px;
+}
+
+/* About */
+#about {
+  text-align: center;
+  padding: 15rem 2rem;
+}
+
+
+.catchcopy {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.hours {
+  font-size: 2rem;
+  margin-top: 5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.features {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* Menu */
+#menu {
+  text-align: center;
+  padding: 10rem 3rem;
+}
+
+#menu h2 {
+  font-size: 2.2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+.price {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.menu-scroll {
+  display: flex;
+  overflow-x: auto;   /* 横スクロールを有効にする */
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory; /* スクロールをぴったり止める */
+}
+
+.price_menu {
+  width: 500px;        /* 画像の幅を固定 */
+  object-fit: cover;
+  flex-shrink: 0;      /* 画像が縮まないようにする */
+  scroll-snap-align: start;
+}
+
+/* Access */
+#access {
+  padding: 10rem 3rem;
+  text-align: center;
+}
+
+#access h2 {
+  font-size: 2.2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 3rem;
+  text-decoration: underline;
+}
+
+.access-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+iframe {
+  border: none;
+  flex-shrink: 0;
+  width: 40%;
+  height: 400px;
+  margin-left: 9em;
+}
+
+.access-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.access-info p {
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.05em;
+  margin: 0 6em
+}
+
+/* Reservation */
+#reservation {
+  text-align: center;
+  padding: 15rem 2rem;
+}
+
+#reservation h2 {
+  font-size: 2.2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+.reservation_info {
+  font-size: 2rem;
+  line-height: 2.5;
+  letter-spacing: 0.1em;
+}
+
+#reservation a {
+  text-decoration: underline;
+}
+
+#reservation a:hover {
+  opacity: 0.6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #0d2d6b;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  #logo {
+    position: static;
+    transform: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  /* Hero */
+  #image {
+    height: 50vh;
+    margin-top: 80px;
+  }
+
+  /* About */
+  #about {
+    padding: 15rem 2rem;
+  }
+
+  .catchcopy {
+    font-size: 1.5rem;
+  }
+
+  .hours {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .features {
+    font-size: 1.2rem;
+  }
+
+  /* Menu */
+  #menu {
+    padding: 5rem 1.5rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  .price_menu {
+    width: 280px;
+  }
+
+  /* Access */
+  #access {
+    padding: 5rem 1.5rem;
+  }
+
+  .access-layout {
+    flex-direction: column; /* 横並びを縦並びに変える */
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+  }
+
+  .access-info p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Reservation */
+  #reservation {
+    padding: 6rem 2rem;
+  }
+
+  .reservation_info {
+    font-size: 1.2rem;
+  }
+
+}
