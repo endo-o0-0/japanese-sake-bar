@@ -43,6 +43,14 @@ header {
   background-color: #ffffff;
 }
 
+.fa-instagram {
+  font-size: 1.5rem;
+}
+
+.fa-instagram:hover {
+  opacity: 0.6;
+}
+
 /* ロゴ画像 */
 #logo {
   height: 70px;
@@ -80,7 +88,7 @@ nav a:hover::after {
 /* Hero */
 #image {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   object-fit: cover;
   display: block;
   margin-top: 110px;
@@ -89,15 +97,33 @@ nav a:hover::after {
 /* About */
 #about {
   text-align: center;
-  padding: 15rem 2rem;
+  padding: 10rem 2rem;
 }
 
 
-.catchcopy {
+.ja_catchcopy {
   font-size: 2.5rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.05rem;
+}
+
+.en_catchcopy {
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 3rem;
+}
+
+.ja_introduction {
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
   margin-bottom: 1rem;
 }
+
+.en_introduction {
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
 
 .hours {
   font-size: 2rem;
@@ -171,7 +197,7 @@ iframe {
   border: none;
   flex-shrink: 0;
   width: 40%;
-  height: 400px;
+  height: 60vh;
   margin-left: 9em;
 }
 
@@ -182,16 +208,24 @@ iframe {
 }
 
 .access-info p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 2;
   letter-spacing: 0.05em;
-  margin: 0 6em
+}
+
+.access-info a {
+  text-decoration: underline;
+}
+
+.access-info a:hover {
+  opacity: 0.6;
 }
 
 /* Reservation */
-#reservation {
+/*#reservation {
   text-align: center;
   padding: 15rem 2rem;
+  padding-bottom: 30rem;
 }
 
 #reservation h2 {
@@ -213,7 +247,7 @@ iframe {
 
 #reservation a:hover {
   opacity: 0.6;
-}
+}*/
 
 /* Footer */
 footer {
@@ -244,7 +278,7 @@ footer {
 
   /* Hero */
   #image {
-    height: 50vh;
+    height: 100vh;
     margin-top: 80px;
   }
 
@@ -300,12 +334,12 @@ footer {
   }
 
   /* Reservation */
-  #reservation {
+  /*#reservation {
     padding: 6rem 2rem;
   }
 
   .reservation_info {
     font-size: 1.2rem;
-  }
+  }*/
 
 }
